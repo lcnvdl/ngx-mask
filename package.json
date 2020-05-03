@@ -1,7 +1,7 @@
 {
-  "name": "ngx-mask",
-  "version": "9.0.1",
-  "description": "awesome ngx mask",
+  "name": "@lcnvdl/ngx-mask",
+  "version": "9.0.3",
+  "description": "awesome ngx mask (fork of ngx-mask)",
   "license": "MIT",
   "angular-cli": {},
   "keywords": [
@@ -16,12 +16,6 @@
     "ng2mask",
     "jsdaddy"
   ],
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run precommit-msg && npm run lint && npm run test"
-    }
-  },
   "private": true,
   "scripts": {
     "build": "ng build showcase --prod",
@@ -36,7 +30,7 @@
     "pack:lib": "cd dist/ngx-mask-lib && npm pack",
     "precommit-msg": "echo 'Please wait while we do our pre-commit checks...' && exit 0",
     "prettier": "prettier './src/**/*.ts' './projects/**/*.ts' --write",
-    "publish:lib": "cd dist/ngx-mask-lib && npm publish",
+    "publish:lib": "cd dist/ngx-mask-lib && npm publish --access public",
     "release:major": "npm run version:major && npm run build:lib && npm run pack:lib && npm run publish:lib",
     "release:minor": "npm run version:minor && npm run build:lib && npm run pack:lib && npm run publish:lib",
     "release:patch": "npm run version:patch && npm run build:lib && npm run pack:lib && npm run publish:lib",
