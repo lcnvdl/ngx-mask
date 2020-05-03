@@ -491,6 +491,9 @@ export class MaskDirective implements ControlValueAccessor, OnChanges, Validator
   }
   // tslint:disable-next-line:no-any
   private _applyMask(): any {
+    if (!this._maskValue || this._maskValue === "") {
+      return;
+    }
     this._maskService.maskExpression = this._repeatPatternSymbols(this._maskValue || '');
     this._maskService.formElementProperty = [
       'value',
